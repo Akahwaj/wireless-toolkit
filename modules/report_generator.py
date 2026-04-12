@@ -8,6 +8,7 @@ def generate_report():
     assessor = input("Enter your name: ").strip()
     environment = input("Enter environment name: ").strip()
     summary = input("Enter short summary: ").strip()
+    report_title = input("Enter report title: ").strip() or "Client Security Assessment Report"
 
     findings = []
     while True:
