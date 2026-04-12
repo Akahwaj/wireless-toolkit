@@ -20,14 +20,12 @@ def generate_report():
         details = input("Finding details: ").strip()
         recommendation = input("Recommendation: ").strip()
 
-        findings.append(
-            {
-                "title": title,
-                "severity": severity,
-                "details": details,
-                "recommendation": recommendation,
-            }
-        )
+        findings.append({
+            "title": title,
+            "severity": severity,
+            "details": details,
+            "recommendation": recommendation,
+        })
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -49,37 +47,31 @@ def generate_report():
 
     if findings:
         for index, finding in enumerate(findings, start=1):
-            report_lines.extend(
-                [
-                    f"{index}. {finding['title']}",
-                    f"   Severity: {finding['severity']}",
-                    f"   Details: {finding['details']}",
-                    f"   Recommendation: {finding['recommendation']}",
-                    "",
-                ]
-            )
+            report_lines.extend([
+                f"{index}. {finding['title']}",
+                f"   Severity: {finding['severity']}",
+                f"   Details: {finding['details']}",
+                f"   Recommendation: {finding['recommendation']}",
+                "",
+            ])
     else:
-        report_lines.append("No findings entered.")
-        report_lines.append("")
+        report_lines.append("No findings entered.\n")
 
-    report_lines.extend(
-        [
-            "Next Steps",
-            "-" * 20,
-            "1. Review findings",
-            "2. Confirm remediation owners",
-            "3. Recheck affected areas after fixes",
-            "",
-        ]
-    )
+    report_lines.extend([
+        "Next Steps",
+        "-" * 20,
+        "1. Review findings",
+        "2. Assign remediation owners",
+        "3. Revalidate after fixes",
+        "",
+    ])
 
     report_text = "\n".join(report_lines)
 
     output_dir = Path("output")
     output_dir.mkdir(exist_ok=True)
 
-    file_name = f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
-    file_path = output_dir / file_name
+    file_path = output_dir / f"report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
     file_path.write_text(report_text, encoding="utf-8")
 
     print("\nReport created successfully.")
