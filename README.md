@@ -1,38 +1,26 @@
-# Wireless Toolkit
+# 📡 Wireless Security Toolkit
 
-A defensive wireless security toolkit for authorized auditing, visibility, monitoring, and lab-safe analysis.
+A **defensive wireless security toolkit** designed for learning, auditing, and lab-based analysis.
 
-## Features
+---
 
-- Wi-Fi audit helpers
-- Signal and channel analysis
-- Safety and authorization checks
+## 🚀 Features
+
+- Wi-Fi configuration auditing
+- Signal strength analysis
+- Safety & authorization checks
 - Report generation
-- Defensive research workflow
+- Modular architecture for expansion
 
-## Scope
+---
 
-This project is intended for:
-- authorized security assessments
-- defensive wireless visibility
-- lab testing
-- documentation and reporting
+## 🛠️ Use Cases
 
-This project is not intended for unauthorized access, intrusion, disruption, or credential abuse.
+- Security learning & practice  
+- Lab environments  
+- Wireless assessments (authorized only)  
+- Documentation & reporting  
 
-## Project Structure
+---
 
-```text
-wireless-toolkit/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── app.py
-├── modules/
-│   ├── __init__.py
-│   ├── wifi_audit.py
-│   ├── signal_analysis.py
-│   ├── report_generator.py
-│   └── safety_checks.py
-└── docs/
-    └── usage.md
+## 📂 Project Structure
