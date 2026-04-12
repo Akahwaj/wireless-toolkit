@@ -1,0 +1,12 @@
+import platform
+import shutil
+
+
+def show_platform_support():
+    print("\n[Platform Support]")
+    print(f"System: {platform.system()}")
+    print("Python installed: Yes")
+    print(f"Nmap installed: {shutil.which('nmap') is not None}")
+    print(f"Tshark installed: {shutil.which('tshark') is not None}")
+    print(f"Tcpdump installed: {shutil.which('tcpdump') is not None}")
+    print(f"Airodump-ng installed: {shutil.which('airodump-ng') is not None}")
