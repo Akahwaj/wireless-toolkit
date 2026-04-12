@@ -32,7 +32,7 @@ report_lines = [
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     report_lines = [
-        "AEGIS TOOLKIT REPORT",
+        report_title,
         "=" * 40,
         f"Project: {project_name}",
         f"Assessor: {assessor}",
