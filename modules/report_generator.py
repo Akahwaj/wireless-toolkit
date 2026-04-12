@@ -9,7 +9,8 @@ def generate_report():
     environment = input("Enter environment name: ").strip()
     summary = input("Enter short summary: ").strip()
     report_title = input("Enter report title: ").strip() or "Client Security Assessment Report"
-
+report_lines = [
+    report_title,
     findings = []
     while True:
         add_more = input("\nAdd a finding? (y/n): ").strip().lower()
