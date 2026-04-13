@@ -1,5 +1,6 @@
 from datetime import datetime
 from pathlib import Path
+from core.session_store import load_session
 
 
 def generate_report():
@@ -10,7 +11,8 @@ def generate_report():
     summary = input("Enter short summary: ").strip()
     report_title = input("Enter report title: ").strip() or "Client Security Assessment Report"
 
-    findings = []
+    session = load_session()
+    findings = session.get("findings", [])
     while True:
         add_more = input("\nAdd a finding? (y/n): ").strip().lower()
         if add_more != "y":
@@ -47,16 +49,16 @@ def generate_report():
     ]
 
     if findings:
-        for index, finding in enumerate(findings, start=1):
+        for i, f in enumerate(findings, 1):
             report_lines.extend([
-                f"{index}. {finding['title']}",
-                f"   Severity: {finding['severity']}",
-                f"   Details: {finding['details']}",
-                f"   Recommendation: {finding['recommendation']}",
+                f"{i}. {f['title']}",
+                f"   Severity: {f['severity']}",
+                f"   Details: {f['details']}",
+                f"   Recommendation: {f['recommendation']}",
                 "",
             ])
     else:
-        report_lines.append("No findings entered.")
+        report_lines.append("No findings collected yet.")
         report_lines.append("")
 
     report_lines.extend([
