@@ -13,6 +13,22 @@ def generate_report():
 
     session = load_session()
     findings = session.get("findings", [])
+    while True:
+        add_more = input("\nAdd a finding? (y/n): ").strip().lower()
+        if add_more != "y":
+            break
+
+        title = input("Finding title: ").strip()
+        severity = input("Severity (Low/Medium/High): ").strip()
+        details = input("Finding details: ").strip()
+        recommendation = input("Recommendation: ").strip()
+
+        findings.append({
+            "title": title,
+            "severity": severity,
+            "details": details,
+            "recommendation": recommendation,
+        })
 
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
