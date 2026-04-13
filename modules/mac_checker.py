@@ -19,9 +19,9 @@ def run_mac_checker():
 
     parts = mac.split(":")
     oui = ":".join(parts[:3]).upper()
-    last_octet_bits = int(parts[0], 16)
-    is_multicast = bool(last_octet_bits & 0x01)
-    is_locally_administered = bool(last_octet_bits & 0x02)
+    first_octet_bits = int(parts[0], 16)
+    is_multicast = bool(first_octet_bits & 0x01)
+    is_locally_administered = bool(first_octet_bits & 0x02)
 
     print(f"\nMAC Address: {mac.upper()}")
     print(f"OUI (Manufacturer prefix): {oui}")
