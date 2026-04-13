@@ -1,8 +1,36 @@
+"""
+Report generation module for the Wireless Toolkit.
+
+Creates a plain-text assessment report and saves it to the ``output/``
+directory (created automatically if it does not exist).
+"""
+
 from datetime import datetime
 from pathlib import Path
 
 
-def generate_report():
+def generate_report() -> None:
+    """Generate and save a plain-text wireless assessment report.
+
+    Prompts the user for a project name and assessor name, then writes a
+    timestamped report to ``output/report.txt``, overwriting any previous
+    file with the same name.  The report is also printed to stdout.
+
+    The output directory (``output/``) is created automatically relative
+    to the current working directory if it does not already exist.
+
+    Returns:
+        None
+
+    Example::
+
+        >>> generate_report()
+        [Report Generator]
+        Enter project name: LabAudit
+        Enter your name: Alice
+        ...
+        Saved to: output/report.txt
+    """
     print("\n[Report Generator]")
     project_name = input("Enter project name: ").strip()
     assessor = input("Enter your name: ").strip()

@@ -1,3 +1,17 @@
+"""
+Aegis Wireless Toolkit – main entry point.
+
+Run this file directly to start the interactive menu::
+
+    python app.py
+
+Select a mode from the main menu:
+    1. Easy Mode     – single-step guided audit (recommended for beginners)
+    2. Guided Mode   – step-by-step walkthrough with explanations
+    3. Advanced Mode – full access to all toolkit features
+    4. Exit
+"""
+
 from modes.easy_mode import run_easy_mode
 from modes.guided_mode import run_guided_mode
 from modes.advanced_mode import run_advanced_mode
