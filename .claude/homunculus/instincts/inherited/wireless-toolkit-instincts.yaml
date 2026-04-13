@@ -1,0 +1,430 @@
+# Instincts generated from https://github.com/Akahwaj/wireless-toolkit
+# Generated: 2026-04-12T23:20:53.441Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: wireless-toolkit-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Commit Length
+
+## Action
+
+Keep commit messages concise (~33 characters)
+
+## Evidence
+
+- Average commit message length: 33 chars
+- Based on 14 commits
+
+---
+id: wireless-toolkit-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: wireless-toolkit-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: wireless-toolkit-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: wireless-toolkit-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: wireless-toolkit-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~15x per month
+- Files: 
+
+---
+id: wireless-toolkit-workflow-add-new-mode
+trigger: "when doing add new mode"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Workflow Add New Mode
+
+## Action
+
+Follow the add-new-mode workflow:
+1. Create a new Python file in the modes/ directory implementing the new mode.
+2. Commit the new file with a message describing the mode.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: modes/*.py
+
+---
+id: wireless-toolkit-workflow-add-helper-module
+trigger: "when doing add helper module"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Workflow Add Helper Module
+
+## Action
+
+Follow the add-helper-module workflow:
+1. Create a new Python file in the modules/ directory implementing the helper logic.
+2. Commit the new file with a descriptive message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: modules/*_helper.py, modules/weak_point_review.py
+
+---
+id: wireless-toolkit-workflow-update-report-generator
+trigger: "when doing update report generator"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Workflow Update Report Generator
+
+## Action
+
+Follow the update-report-generator workflow:
+1. Edit modules/report_generator.py to implement changes.
+2. Commit the updated file with a relevant message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: modules/report_generator.py
+
+---
+id: wireless-toolkit-instinct-file-naming
+trigger: "When creating a new Python file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct File Naming
+
+## Action
+
+Name the file using snake_case
+
+## Evidence
+
+- Pattern in files: modes/easy_mode.py, modules/notes_helper.py
+
+---
+id: wireless-toolkit-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: wireless-toolkit-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: wireless-toolkit-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: wireless-toolkit-instinct-import-style
+trigger: "When importing modules within the package"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: wireless-toolkit-instinct-export-style
+trigger: "When exporting functions or classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: wireless-toolkit-instinct-test-location
+trigger: "When adding tests for a new feature or module"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Test Location
+
+## Action
+
+Place test files in a separate test directory
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+
+---
+id: wireless-toolkit-instinct-test-sequence
+trigger: "When implementing a new feature"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Test Sequence
+
+## Action
+
+After adding the feature, add tests for it before updating documentation
+
+## Evidence
+
+- Pattern in workflows.feature-development.commitSequence
+
+---
+id: wireless-toolkit-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Commit Format
+
+## Action
+
+Start the message with an imperative verb and keep it concise (average ~33 characters)
+
+## Evidence
+
+- Pattern in commits.examples: 'Add Easy Mode for beginner-friendly workflow', 'Update app.py'
+
+---
+id: wireless-toolkit-instinct-add-new-mode
+trigger: "When someone wants to introduce a new way for users to interact with the toolkit"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Add New Mode
+
+## Action
+
+Create a new Python file in the modes/ directory implementing the new mode and commit it with a descriptive message
+
+## Evidence
+
+- Workflow: add-new-mode
+- Pattern in files: modes/easy_mode.py, modes/guided_mode.py
+
+---
+id: wireless-toolkit-instinct-add-helper-module
+trigger: "When someone wants to add a new helper feature to the toolkit"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Add Helper Module
+
+## Action
+
+Create a new Python file in the modules/ directory implementing the helper logic and commit it with a descriptive message
+
+## Evidence
+
+- Workflow: add-helper-module
+- Pattern in files: modules/notes_helper.py, modules/teach_helper.py
+
+---
+id: wireless-toolkit-instinct-update-report-generator
+trigger: "When someone wants to enhance or fix the report generation process"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: Akahwaj/wireless-toolkit
+---
+
+# Wireless Toolkit Instinct Update Report Generator
+
+## Action
+
+Edit modules/report_generator.py to implement changes and commit the updated file with a relevant message
+
+## Evidence
+
+- Workflow: update-report-generator
+- Pattern in files: modules/report_generator.py
+
