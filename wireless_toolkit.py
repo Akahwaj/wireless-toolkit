@@ -52,10 +52,6 @@ MENU = """
 """
 
 
-def pause():
-    input("\nPress Enter to continue...")
-
-
 def show_main_menu():
     print(DISCLAIMER)
     print(MENU)
@@ -71,7 +67,6 @@ def main():
             show_glossary()
         elif choice == "2":
             show_hardening_checklist()
-            pause()
         elif choice == "3":
             show_passive_discovery()
         elif choice == "4":
@@ -87,7 +82,6 @@ def main():
             break
         else:
             print("\n  Invalid choice. Please enter a number from the menu.")
-            pause()
 
 
 if __name__ == "__main__":

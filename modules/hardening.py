@@ -103,3 +103,4 @@ def show_hardening_checklist():
     print("    LOW      — fix when convenient")
     print("\n  Tip: Work through each section systematically.")
     print("  Only assess networks you are authorized to review.")
+    input("\nPress Enter to return to the main menu...")
