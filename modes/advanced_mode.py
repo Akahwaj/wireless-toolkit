@@ -5,6 +5,7 @@ from modules.report_generator import generate_report
 from modules.notes_helper import create_assessment_note
 from modules.security_review import run_security_review
 from modules.weak_point_review import run_weak_point_review
+from modules.codespaces_helper import run_codespaces_helper
 from integrations.platform_check import show_platform_support
 
 
@@ -20,13 +21,14 @@ def show_advanced_menu():
     print("6. Create Notes")
     print("7. Platform Check")
     print("8. Security Review")
-    print("9. Back")
+    print("9. GitHub Codespaces Helper")
+    print("10. Back")
 
 
 def run_advanced_mode():
     while True:
         show_advanced_menu()
-        choice = input("\nChoose an option (1-9): ").strip()
+        choice = input("\nChoose an option (1-10): ").strip()
 
         if choice == "1":
             run_wifi_audit()
@@ -45,6 +47,8 @@ def run_advanced_mode():
         elif choice == "8":
             run_security_review()
         elif choice == "9":
+            run_codespaces_helper()
+        elif choice == "10":
             return
         else:
             print("\nInvalid choice.")
