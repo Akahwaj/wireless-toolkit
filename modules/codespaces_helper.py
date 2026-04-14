@@ -19,7 +19,7 @@ def _run_gh(*args):
             print(result.stderr.rstrip())
         return result.returncode == 0
     except FileNotFoundError:
-        print("GitHub CLI (gh) is not installed or not in PATH.")
+        print("Unexpected error: GitHub CLI (gh) was not found.")
         return False
 
 
@@ -67,7 +67,7 @@ def run_codespaces_helper():
         if not codespace_name:
             print("Codespace name is required.")
             return
-        confirm = input(f"Delete codespace '{codespace_name}'? (yes/no): ").strip().lower()
+        confirm = input(f"Delete codespace '{codespace_name}'? (yes/y/no): ").strip().lower()
         if confirm in {"yes", "y"}:
             _run_gh("codespace", "delete", "-c", codespace_name)
         else:
